@@ -1,0 +1,11 @@
+<form [formGroup]="feedbackForm" class="form-container" (ngSubmit)="onSubmit(feedbackForm)">
+  <div>
+    <input matInput placeholder="Enter your name" formControlName="name">
+  </div>
+
+   <div>
+    <textarea  placeholder="Your Comment" formControlName="feedback"></textarea>
+  </div>
+
+  <button >Submit</button>
+</form>
