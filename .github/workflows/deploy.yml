@@ -40,7 +40,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-         run: |
+        run: |
           export NODE_OPTIONS=--openssl-legacy-provider
           npm run build -- --base-href "/my-first-project/"
      #base-href in an Angular app defines the root path for resolving relative URLs to assets (CSS, JS, etc.). 
