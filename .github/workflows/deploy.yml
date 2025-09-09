@@ -42,7 +42,7 @@ jobs:
           npm install
 
       - name: Build Angular app
-        run: npm run build -- --base-href "/my-first-project/"
+        run: npm run build -- --base-href "/angular12-app/"
      #base-href in an Angular app defines the root path for resolving relative URLs to assets (CSS, JS, etc.). 
      #By default, Angular apps assume they are hosted at the root (/). 
      #The trailing slash at the end of base-href is important.
@@ -50,10 +50,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: ./dist/my-first-project
+          path: ./dist/angular12-app
       #Check outputPath in  angular.json file
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/my-first-project
+          publish_dir: ./dist/angular12-app
